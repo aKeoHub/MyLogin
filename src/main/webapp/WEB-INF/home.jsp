@@ -12,6 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Home Page</h1>
+        
+        <p>
+            <strong>Hello abe</strong>
+            
+            <a href="login?logout">Logout</a>
+        </p>
     </body>
 </html>
