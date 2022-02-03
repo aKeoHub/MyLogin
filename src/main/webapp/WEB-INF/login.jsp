@@ -16,15 +16,17 @@
         <form action="login" method="post">
             <p>
                 <label for="username">Username: </label>
-                <input type="text" name="username" id="username">
+                <input type="text" name="username" id="username" required>
                 
             </p>
             <p>
                 <label for="password">Password: </label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required>
             </p>
             
             <button type="submit">Submit</button>
         </form>
+        
+        <p>${message}</p>
     </body>
 </html>
