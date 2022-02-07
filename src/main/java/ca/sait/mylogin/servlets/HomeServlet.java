@@ -1,4 +1,3 @@
-
 package ca.sait.mylogin.servlets;
 
 import java.io.IOException;
@@ -15,7 +14,6 @@ import javax.servlet.http.HttpSession;
  */
 public class HomeServlet extends HttpServlet {
 
-
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -27,18 +25,18 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         HttpSession session = request.getSession();
-        
+
         String username = (String) session.getAttribute("username");
-        
-                if(username == null) {
+
+        if (username == null) {
             response.sendRedirect("login");
             return;
         }
-        
+
         request.setAttribute("username", username);
-        
+
         getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
     }
 
@@ -55,6 +53,5 @@ public class HomeServlet extends HttpServlet {
             throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
     }
-
 
 }
